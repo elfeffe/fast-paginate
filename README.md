@@ -9,6 +9,29 @@ Fork of [hammerstonedev/fast-paginate](https://github.com/hammerstonedev/fast-pa
 
 Namespace and API are unchanged (`AaronFrancis\FastPaginate`), so existing `->fastPaginate()` / `->simpleFastPaginate()` calls keep working.
 
+## Composer (deploy without local path)
+
+In the consuming Laravel app, list the **path** repository first (for local dev), then the **VCS** repository:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/elfeffe/fast-paginate",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/elfeffe/fast-paginate.git"
+        }
+    ],
+    "require": {
+        "elfeffe/fast-paginate": "dev-main"
+    }
+}
+```
+
 ## License
 
 MIT (same as upstream).
