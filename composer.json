@@ -1,0 +1,48 @@
+{
+    "name": "elfeffe/fast-paginate",
+    "description": "Fast offset/limit pagination for Laravel (fork with Laravel 13 support; upstream: hammerstonedev/fast-paginate, Packagist: aaronfrancis/fast-paginate)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aaron Francis",
+            "email": "aarondfrancis@gmail.com"
+        },
+        {
+            "name": "Elfeffe",
+            "role": "Fork maintenance (Laravel 13)"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "mockery/mockery": "^1.6",
+        "phpunit/phpunit": "^10.5|^11.0",
+        "laravel/scout": "^10.8|^11.0"
+    },
+    "replace": {
+        "aaronfrancis/fast-paginate": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AaronFrancis\\FastPaginate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AaronFrancis\\FastPaginate\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AaronFrancis\\FastPaginate\\FastPaginateProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
